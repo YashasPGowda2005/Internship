@@ -1,0 +1,27 @@
+# Single Inheritance
+
+class Father:
+    def __init__(self, surname, father_name):
+        self.surname = surname
+        self.father_name = father_name
+        
+    def display_surname(self):
+        print("surname is ", self.surname)
+        
+    def display_father_name(self):
+        print("the fathername is ", self.father_name)
+
+
+class son(Father):
+    def __init__(self, name, surname, father_name):
+        self.name = name
+        super().__init__(surname, father_name)
+        
+    def display_name(self):
+        print("name is ", self.name)
+
+
+child_obj = son("Purushotham", "PM","Purushotham")
+child_obj.display_father_name()
+child_obj.display_surname()
+child_obj.display_name()
